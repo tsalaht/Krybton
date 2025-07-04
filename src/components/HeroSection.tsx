@@ -48,8 +48,8 @@ const HeroSection: React.FC = () => {
       <div className="relative z-10 text-center max-w-6xl mx-auto">
         {/* Company Logo/Brand */}
         <div className="mb-8 animate-fade-in">
-          <div className="inline-flex items-center justify-center w-20 h-20 glass rounded-2xl mb-6 animate-glow">
-            <span className="text-3xl font-bold text-gradient font-tajawal">K</span>
+          <div className="inline-flex items-center justify-center w-52 h-w-52 glass rounded-2xl mb-6 animate-glow">
+           <img src="/logo.png" alt="" />
           </div>
         </div>
 
@@ -93,7 +93,7 @@ const HeroSection: React.FC = () => {
         {/* Floating Contact Info */}
         <div className="mt-16 animate-fade-in" style={{animationDelay: '1s'}}>
           <div className="inline-flex items-center glass px-6 py-3 rounded-full">
-            <span className="text-orange font-semibold font-tajawal">+962 7 8295 0000</span>
+            <span className="text-orange font-semibold font-tajawal">00962782950000</span>
           </div>
         </div>
       </div>

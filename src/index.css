@@ -103,7 +103,7 @@ All colors MUST be HSL.
   }
   
   .btn-orange {
-    @apply bg-orange-gradient text-white hover:shadow-lg hover:shadow-orange/50 transition-all duration-300 transform hover:scale-105;
+    @apply bg-blue-gradient text-white hover:shadow-lg hover:shadow-orange/50 transition-all duration-300 transform hover:scale-105;
   }
   
   .section-padding {

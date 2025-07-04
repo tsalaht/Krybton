@@ -53,7 +53,7 @@ const AboutSection: React.FC = () => {
           <div className="animate-on-scroll" style={{animationDelay: '0.2s'}}>
             <div className="relative">
               <div className="glass rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="bg-orange-gradient rounded-2xl p-8 text-white">
+                <div className="bg-blue-gradient rounded-2xl p-8 text-white">
                   <div className="text-center">
                     <div className="text-4xl font-bold mb-2">100+</div>
                     <div className="text-lg opacity-90 mb-4 font-tajawal">مشروع ناجح</div>

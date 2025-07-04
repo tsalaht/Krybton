@@ -54,9 +54,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				orange: {
-					DEFAULT: '#FFA500',
-					light: '#FFB733',
-					dark: '#E6940A'
+				 DEFAULT: '#9cc8e2',
+  light: '#b5d9ec',   // ~20% lighter
+  dark: '#6ba5c5' 
 				}
 			},
 			fontFamily: {
@@ -118,12 +118,12 @@ export default {
 					}
 				},
 				glow: {
-					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(255, 165, 0, 0.3)'
-					},
-					'50%': {
-						boxShadow: '0 0 40px rgba(255, 165, 0, 0.6)'
-					}
+				  '0%, 100%': {
+    boxShadow: '0 0 20px rgba(156, 200, 226, 0.3)'  // #9cc8e2 at 30%
+  },
+				  '50%': {
+    boxShadow: '0 0 40px rgba(156, 200, 226, 0.6)'  // #9cc8e2 at 60%
+  }
 				}
 			},
 			animation: {
@@ -136,7 +136,7 @@ export default {
 			},
 			backgroundImage: {
 				'glass-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
-				'orange-gradient': 'linear-gradient(135deg, #FFA500 0%, #FFB733 100%)',
+			'blue-gradient': 'linear-gradient(135deg, #9cc8e2 0%, #b5d9ec 100%)'
 			},
 			backdropBlur: {
 				xs: '2px',

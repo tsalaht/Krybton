@@ -48,9 +48,13 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-gradient font-tajawal">
+            {/* <div className="text-2xl font-bold text-gradient font-tajawal">
               كريبتون
-            </div>
+            </div> */}
+            <img
+          alt="Krypton Logo"
+          className="h-auto w-24 md:w-32"
+              src="/logo.png"/>
           </div>
 
           {/* Desktop Navigation */}

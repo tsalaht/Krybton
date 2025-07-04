@@ -60,7 +60,7 @@ const ServicesSection: React.FC = () => {
                 style={{animationDelay: `${index * 0.1}s`}}
               >
                 <div className="mb-6 flex  justify-end">
-                  <div className="w-16 h-16 bg-orange-gradient rounded-xl flex items-center justify-center mb-4 group-hover:animate-glow ">
+                  <div className="w-16 h-16 bg-blue-gradient rounded-xl flex items-center justify-center mb-4 group-hover:animate-glow ">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                 </div>

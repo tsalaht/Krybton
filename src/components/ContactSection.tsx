@@ -158,7 +158,7 @@ const ContactSection: React.FC = () => {
                 return (
                   <div key={index} className="glass rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
                     <div className="flex items-start space-x-4 rtl space-x-reverse">
-                      <div className="w-12 h-12 bg-orange-gradient rounded-lg flex items-center justify-center group-hover:animate-glow">
+                      <div className="w-12 h-12 bg-blue-gradient rounded-lg flex items-center justify-center group-hover:animate-glow">
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1 text-right">
@@ -187,10 +187,10 @@ const ContactSection: React.FC = () => {
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-orange mx-auto mb-4" />
                 <div className="text-lg font-medium text-foreground mb-2 font-tajawal">
-                  تجدنا في عمان
+                  تجدنا في الرصيفه 
                 </div>
                 <div className="font-tajawal text-muted-foreground">
-                  المملكة الأردنية الهاشمية
+                  المملكة الأردنية الرصيفه الجبل الشمالي مجمع عمار موبايل الطابق الاول
                 </div>
               </div>
             </div>
