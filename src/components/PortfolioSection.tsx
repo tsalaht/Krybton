@@ -46,7 +46,7 @@ const PortfolioSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-tajawal">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-tajawal ">
             <span className="text-gradient">أعمالنا</span> المميزة
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-tajawal">
@@ -59,7 +59,7 @@ const PortfolioSection: React.FC = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group cursor-pointer animate-on-scroll"
+              className="group cursor-pointer animate-on-scroll "
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className="glass rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500">
@@ -79,17 +79,17 @@ const PortfolioSection: React.FC = () => {
 
                 {/* Project Info */}
                 <div className="p-6">
-                  <div className="mb-2">
-                    <span className="inline-block px-3 py-1 text-xs font-medium bg-orange/20 text-orange rounded-full font-tajawal">
+                  <div className="mb-2 text-right">
+                    <span className="inline-block px-3 py-1 text-xs font-medium bg-orange/20 text-orange rounded-full font-tajawal text-right">
                       {project.category}
                     </span>
                   </div>
                   
-                  <h4 className="text-xl font-bold mb-3 text-foreground group-hover:text-orange transition-colors font-tajawal">
+                  <h4 className="text-xl font-bold mb-3 text-foreground group-hover:text-orange transition-colors font-tajawal text-right">
                     {project.title}
                   </h4>
                   
-                  <p className="text-sm text-muted-foreground leading-relaxed font-tajawal">
+                  <p className="text-sm text-muted-foreground leading-relaxed font-tajawal text-right">
                     {project.description}
                   </p>
                 </div>

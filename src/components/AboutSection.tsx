@@ -18,17 +18,17 @@ const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-tajawal">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-tajawal text-right">
               عن <span className="text-gradient">كريبتون</span>
             </h2>
             
             <div className="space-y-6 mb-8">
-              <p className="text-lg text-muted-foreground leading-relaxed font-tajawal">
+              <p className="text-lg text-muted-foreground leading-relaxed font-tajawal text-right">
                 في كريبتون، نحن متحمسون لإنشاء تجارب رقمية استثنائية تدفع نمو الأعمال. يجمع فريقنا من المحترفين 
                 المهرة بين الإبداع والتكنولوجيا المتطورة لتقديم حلول تفوق التوقعات.
               </p>
               
-              <p className="text-lg font-tajawal text-muted-foreground leading-relaxed">
+              <p className="text-lg font-tajawal text-muted-foreground leading-relaxed text-right">
                 نؤمن بأن التكنولوجيا يجب أن تكون في خدمة الإنسان، ولذلك نسعى دائماً لتقديم حلول تقنية متقدمة 
                 ومبتكرة تساعد عملاءنا على تحقيق أهدافهم والوصول إلى آفاق جديدة في العالم الرقمي.
               </p>
@@ -36,7 +36,7 @@ const AboutSection: React.FC = () => {
 
             {/* Why Choose Us */}
             <div className="mb-8">
-              <h4 className="text-xl font-bold mb-4 text-foreground font-tajawal">لماذا تختارنا؟</h4>
+              <h4 className="text-xl font-bold mb-4 text-foreground font-tajawal text-right">لماذا تختارنا؟</h4>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {features.map((feature, index) => (
@@ -65,8 +65,8 @@ const AboutSection: React.FC = () => {
               <div className="absolute -bottom-4 -right-4 glass rounded-2xl p-6 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-orange mb-1">50+</div>
-                  <div className="text-sm text-muted-foreground font-tajawal">عميل راضٍ</div>
-                  <div className="font-tajawal text-xs text-muted-foreground">عن خدماتنا</div>
+                  <div className="text-sm -foreground font-tajawal">عميل راضٍ</div>
+                  <div className="font-tajawal text-xs -foreground">عن خدماتنا</div>
                 </div>
               </div>
             </div>

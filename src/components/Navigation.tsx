@@ -48,7 +48,7 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-gradient">
+            <div className="text-2xl font-bold text-gradient font-tajawal">
               كريبتون
             </div>
           </div>

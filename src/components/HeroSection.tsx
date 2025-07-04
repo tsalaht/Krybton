@@ -1,15 +1,36 @@
-
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import gsap from 'gsap';
 
 const HeroSection: React.FC = () => {
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+
   const scrollToContact = () => {
     const element = document.querySelector('#contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    if (headingRef.current && subtitleRef.current) {
+      gsap.from(headingRef.current, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power3.out',
+      });
+      gsap.from(subtitleRef.current, {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        delay: 0.5,
+        ease: 'power3.out',
+      });
+    }
+  }, []);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden section-padding">
@@ -28,12 +49,12 @@ const HeroSection: React.FC = () => {
         {/* Company Logo/Brand */}
         <div className="mb-8 animate-fade-in">
           <div className="inline-flex items-center justify-center w-20 h-20 glass rounded-2xl mb-6 animate-glow">
-            <span className="text-3xl font-bold text-gradient font-tajawal">ك</span>
+            <span className="text-3xl font-bold text-gradient font-tajawal">K</span>
           </div>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in font-tajawal" style={{animationDelay: '0.2s'}}>
+        <h1 ref={headingRef} className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in font-tajawal" style={{animationDelay: '0.2s'}}>
           <span className="block text-foreground mb-2">مرحباً بكم في</span>
           <span className="block text-gradient">كريبتون</span>
         </h1>
@@ -46,7 +67,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Subtitle */}
-        <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12 animate-fade-in font-tajawal" style={{animationDelay: '0.6s'}}>
+        <p ref={subtitleRef} className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12 animate-fade-in font-tajawal" style={{animationDelay: '0.6s'}}>
           نصنع التميز الرقمي من خلال الابتكار
         </p>
 

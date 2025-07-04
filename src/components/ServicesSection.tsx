@@ -59,17 +59,17 @@ const ServicesSection: React.FC = () => {
                 className="glass rounded-2xl p-8 hover:scale-105 transition-all duration-300 group animate-on-scroll"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-orange-gradient rounded-xl flex items-center justify-center mb-4 group-hover:animate-glow">
+                <div className="mb-6 flex  justify-end">
+                  <div className="w-16 h-16 bg-orange-gradient rounded-xl flex items-center justify-center mb-4 group-hover:animate-glow ">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                 </div>
                 
-                <h4 className="text-xl font-bold mb-4 text-foreground group-hover:text-orange transition-colors font-tajawal">
+                <h4 className="text-xl font-bold mb-4 text-foreground group-hover:text-orange transition-colors font-tajawal text-right">
                   {service.title}
                 </h4>
                 
-                <p className="text-muted-foreground leading-relaxed font-tajawal">
+                <p className="text-muted-foreground leading-relaxed font-tajawal text-right">
                   {service.description}
                 </p>
               </div>
