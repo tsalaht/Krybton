@@ -66,12 +66,12 @@ const Index = () => {
         <footer className="bg-card border-t border-border py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="text-2xl font-bold text-gradient mb-4">Krypton</div>
-              <div className="font-tajawal rtl text-muted-foreground mb-4">
+              <div className="text-2xl font-bold text-gradient mb-4 font-tajawal">كريبتون</div>
+              <div className="font-tajawal text-muted-foreground mb-4">
                 مؤسسة ابراهيم أسعد لخدمات الإنترنت
               </div>
-              <div className="text-sm text-muted-foreground">
-                © 2024 Krypton. All rights reserved. | جميع الحقوق محفوظة
+              <div className="text-sm text-muted-foreground font-tajawal">
+                © 2024 كريبتون. جميع الحقوق محفوظة
               </div>
             </div>
           </div>

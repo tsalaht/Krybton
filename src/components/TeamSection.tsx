@@ -4,40 +4,28 @@ import React from 'react';
 const TeamSection: React.FC = () => {
   const teamMembers = [
     {
-      name: 'Ibrahim Asaad',
-      nameAr: 'إبراهيم أسعد',
-      position: 'Founder & CEO',
-      positionAr: 'المؤسس والرئيس التنفيذي',
+      name: 'إبراهيم أسعد',
+      position: 'المؤسس والرئيس التنفيذي',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
-      bio: 'Visionary leader with 10+ years in tech industry',
-      bioAr: 'قائد ذو رؤية مع أكثر من 10 سنوات في صناعة التكنولوجيا'
+      bio: 'قائد ذو رؤية مع أكثر من 10 سنوات في صناعة التكنولوجيا'
     },
     {
-      name: 'Sarah Ahmad',
-      nameAr: 'سارة أحمد',
-      position: 'Lead Designer',
-      positionAr: 'مصممة رئيسية',
+      name: 'سارة أحمد',
+      position: 'مصممة رئيسية',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b830?w=400&h=400&fit=crop&crop=face',
-      bio: 'Creative designer specializing in UI/UX and branding',
-      bioAr: 'مصممة مبدعة متخصصة في واجهات المستخدم والهوية البصرية'
+      bio: 'مصممة مبدعة متخصصة في واجهات المستخدم والهوية البصرية'
     },
     {
-      name: 'Mohammed Hassan',
-      nameAr: 'محمد حسن',
-      position: 'Lead Developer',
-      positionAr: 'مطور رئيسي',
+      name: 'محمد حسن',
+      position: 'مطور رئيسي',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-      bio: 'Full-stack developer with expertise in modern frameworks',
-      bioAr: 'مطور متكامل خبير في الأطر التقنية الحديثة'
+      bio: 'مطور متكامل خبير في الأطر التقنية الحديثة'
     },
     {
-      name: 'Layla Omar',
-      nameAr: 'ليلى عمر',
-      position: 'Project Manager',
-      positionAr: 'مديرة المشاريع',
+      name: 'ليلى عمر',
+      position: 'مديرة المشاريع',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
-      bio: 'Experienced project manager ensuring timely delivery',
-      bioAr: 'مديرة مشاريع ذات خبرة تضمن التسليم في الوقت المحدد'
+      bio: 'مديرة مشاريع ذات خبرة تضمن التسليم في الوقت المحدد'
     }
   ];
 
@@ -46,14 +34,11 @@ const TeamSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Meet Our <span className="text-gradient">Team</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-tajawal">
+            تعرف على <span className="text-gradient">فريقنا</span>
           </h2>
-          <h3 className="text-2xl md:text-3xl font-tajawal rtl text-muted-foreground mb-6">
-            تعرف على فريقنا
-          </h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Our talented team of professionals is dedicated to bringing your vision to life
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-tajawal">
+            فريقنا الموهوب من المحترفين مكرس لتحويل رؤيتك إلى واقع ملموس
           </p>
         </div>
 
@@ -80,29 +65,20 @@ const TeamSection: React.FC = () => {
 
                 {/* Member Info */}
                 <div>
-                  <h4 className="text-xl font-bold mb-1 text-foreground group-hover:text-orange transition-colors">
+                  <h4 className="text-xl font-bold mb-1 text-foreground group-hover:text-orange transition-colors font-tajawal">
                     {member.name}
                   </h4>
-                  <h5 className="text-lg font-tajawal rtl text-muted-foreground mb-3">
-                    {member.nameAr}
-                  </h5>
                   
                   <div className="mb-4">
-                    <div className="text-sm font-medium text-orange mb-1">
+                    <div className="text-sm font-medium text-orange mb-1 font-tajawal">
                       {member.position}
-                    </div>
-                    <div className="text-sm font-tajawal rtl text-muted-foreground">
-                      {member.positionAr}
                     </div>
                   </div>
 
                   {/* Bio */}
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-sm text-muted-foreground mb-2 leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed font-tajawal">
                       {member.bio}
-                    </p>
-                    <p className="text-xs font-tajawal rtl text-muted-foreground/80 leading-relaxed">
-                      {member.bioAr}
                     </p>
                   </div>
                 </div>

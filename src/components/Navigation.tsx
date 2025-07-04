@@ -22,12 +22,12 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
   }, []);
 
   const navItems = [
-    { name: 'Home', nameAr: 'الرئيسية', href: '#home' },
-    { name: 'About', nameAr: 'عن الشركة', href: '#about' },
-    { name: 'Services', nameAr: 'الخدمات', href: '#services' },
-    { name: 'Portfolio', nameAr: 'الأعمال', href: '#portfolio' },
-    { name: 'Team', nameAr: 'الفريق', href: '#team' },
-    { name: 'Contact', nameAr: 'اتصل بنا', href: '#contact' },
+    { name: 'الرئيسية', href: '#home' },
+    { name: 'عن الشركة', href: '#about' },
+    { name: 'الخدمات', href: '#services' },
+    { name: 'الأعمال', href: '#portfolio' },
+    { name: 'الفريق', href: '#team' },
+    { name: 'اتصل بنا', href: '#contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -49,28 +49,27 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-2xl font-bold text-gradient">
-              Krypton
+              كريبتون
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-8 rtl space-x-reverse">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-foreground hover:text-orange transition-colors duration-200 px-3 py-2 text-sm font-medium"
+                  className="text-foreground hover:text-orange transition-colors duration-200 px-3 py-2 text-sm font-medium font-tajawal"
                 >
-                  <span className="block">{item.name}</span>
-                  <span className="block text-xs font-tajawal rtl">{item.nameAr}</span>
+                  {item.name}
                 </button>
               ))}
             </div>
           </div>
 
           {/* Dark Mode Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 rtl space-x-reverse">
             <Button
               variant="ghost"
               size="icon"
@@ -102,10 +101,9 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-orange hover:bg-white/10 rounded-md transition-colors duration-200 w-full text-left"
+                className="block px-3 py-2 text-base font-medium text-foreground hover:text-orange hover:bg-white/10 rounded-md transition-colors duration-200 w-full text-right font-tajawal"
               >
-                <span className="block">{item.name}</span>
-                <span className="block text-sm font-tajawal rtl text-muted-foreground">{item.nameAr}</span>
+                {item.name}
               </button>
             ))}
           </div>

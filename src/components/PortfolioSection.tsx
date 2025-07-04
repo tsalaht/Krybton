@@ -4,52 +4,40 @@ import React from 'react';
 const PortfolioSection: React.FC = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      titleAr: 'منصة التجارة الإلكترونية',
-      category: 'Web Development',
-      categoryAr: 'تطوير المواقع',
+      title: 'منصة التجارة الإلكترونية',
+      category: 'تطوير المواقع',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-      description: 'Modern e-commerce solution with advanced features'
+      description: 'حل تجارة إلكترونية حديث بميزات متقدمة ونظام دفع آمن'
     },
     {
-      title: 'Mobile Banking App',
-      titleAr: 'تطبيق البنك المحمول',
-      category: 'Mobile Development',
-      categoryAr: 'تطوير التطبيقات',
+      title: 'تطبيق البنك المحمول',
+      category: 'تطوير التطبيقات',
       image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop',
-      description: 'Secure and user-friendly banking application'
+      description: 'تطبيق مصرفي آمن وسهل الاستخدام مع أحدث تقنيات الأمان'
     },
     {
-      title: 'Corporate Identity',
-      titleAr: 'الهوية المؤسسية',
-      category: 'Branding',
-      categoryAr: 'الهوية البصرية',
+      title: 'الهوية المؤسسية',
+      category: 'الهوية البصرية',
       image: 'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=800&h=600&fit=crop',
-      description: 'Complete brand identity for modern business'
+      description: 'هوية بصرية متكاملة للشركات العصرية مع دليل استخدام شامل'
     },
     {
-      title: 'Restaurant Web App',
-      titleAr: 'تطبيق المطعم الويب',
-      category: 'Web Development',
-      categoryAr: 'تطوير المواقع',
+      title: 'تطبيق المطعم الويب',
+      category: 'تطوير المواقع',
       image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop',
-      description: 'Online ordering and reservation system'
+      description: 'نظام طلبات وحجوزات متكامل للمطاعم مع واجهة سهلة الاستخدام'
     },
     {
-      title: 'Fitness Tracking App',
-      titleAr: 'تطبيق تتبع اللياقة',
-      category: 'Mobile Development',
-      categoryAr: 'تطوير التطبيقات',
+      title: 'تطبيق تتبع اللياقة',
+      category: 'تطوير التطبيقات',
       image: 'https://images.unsplash.com/photo-1434596922112-19c563067271?w=800&h=600&fit=crop',
-      description: 'Health and fitness monitoring application'
+      description: 'تطبيق مراقبة الصحة واللياقة البدنية مع ميزات تتبع متقدمة'
     },
     {
-      title: 'Education Platform',
-      titleAr: 'منصة التعليم',
-      category: 'Web Development',
-      categoryAr: 'تطوير المواقع',
+      title: 'منصة التعليم',
+      category: 'تطوير المواقع',
       image: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&h=600&fit=crop',
-      description: 'Interactive learning management system'
+      description: 'نظام إدارة التعلم التفاعلي للمؤسسات التعليمية'
     }
   ];
 
@@ -58,14 +46,11 @@ const PortfolioSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Our <span className="text-gradient">Portfolio</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-tajawal">
+            <span className="text-gradient">أعمالنا</span> المميزة
           </h2>
-          <h3 className="text-2xl md:text-3xl font-tajawal rtl text-muted-foreground mb-6">
-            أعمالنا المميزة
-          </h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Take a look at some of our recent projects that showcase our expertise and creativity
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-tajawal">
+            ألقِ نظرة على بعض مشاريعنا الحديثة التي تعرض خبرتنا وإبداعنا في مختلف المجالات
           </p>
         </div>
 
@@ -87,8 +72,7 @@ const PortfolioSection: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="text-white text-center">
-                      <div className="text-sm font-medium mb-1">{project.category}</div>
-                      <div className="text-xs font-tajawal rtl">{project.categoryAr}</div>
+                      <div className="text-sm font-medium font-tajawal">{project.category}</div>
                     </div>
                   </div>
                 </div>
@@ -96,19 +80,16 @@ const PortfolioSection: React.FC = () => {
                 {/* Project Info */}
                 <div className="p-6">
                   <div className="mb-2">
-                    <span className="inline-block px-3 py-1 text-xs font-medium bg-orange/20 text-orange rounded-full">
+                    <span className="inline-block px-3 py-1 text-xs font-medium bg-orange/20 text-orange rounded-full font-tajawal">
                       {project.category}
                     </span>
                   </div>
                   
-                  <h4 className="text-xl font-bold mb-2 text-foreground group-hover:text-orange transition-colors">
+                  <h4 className="text-xl font-bold mb-3 text-foreground group-hover:text-orange transition-colors font-tajawal">
                     {project.title}
                   </h4>
-                  <h5 className="text-lg font-tajawal rtl text-muted-foreground mb-3">
-                    {project.titleAr}
-                  </h5>
                   
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed font-tajawal">
                     {project.description}
                   </p>
                 </div>

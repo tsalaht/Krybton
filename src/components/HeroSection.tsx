@@ -28,54 +28,51 @@ const HeroSection: React.FC = () => {
         {/* Company Logo/Brand */}
         <div className="mb-8 animate-fade-in">
           <div className="inline-flex items-center justify-center w-20 h-20 glass rounded-2xl mb-6 animate-glow">
-            <span className="text-3xl font-bold text-gradient">K</span>
+            <span className="text-3xl font-bold text-gradient font-tajawal">ك</span>
           </div>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in" style={{animationDelay: '0.2s'}}>
-          <span className="block text-foreground mb-2">Welcome to</span>
-          <span className="block text-gradient">Krypton</span>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in font-tajawal" style={{animationDelay: '0.2s'}}>
+          <span className="block text-foreground mb-2">مرحباً بكم في</span>
+          <span className="block text-gradient">كريبتون</span>
         </h1>
 
         {/* Arabic Company Name */}
         <div className="mb-8 animate-fade-in" style={{animationDelay: '0.4s'}}>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-tajawal rtl text-muted-foreground mb-2">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-tajawal text-muted-foreground mb-2">
             مؤسسة ابراهيم أسعد لخدمات الإنترنت
           </h2>
         </div>
 
         {/* Subtitle */}
-        <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12 animate-fade-in" style={{animationDelay: '0.6s'}}>
-          Crafting Digital Excellence Through Innovation
-          <span className="block mt-2 font-tajawal rtl">نصنع التميز الرقمي من خلال الابتكار</span>
+        <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12 animate-fade-in font-tajawal" style={{animationDelay: '0.6s'}}>
+          نصنع التميز الرقمي من خلال الابتكار
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{animationDelay: '0.8s'}}>
           <Button
             onClick={scrollToContact}
-            className="btn-orange px-8 py-4 text-lg rounded-full group"
+            className="btn-orange px-8 py-4 text-lg rounded-full group font-tajawal"
           >
-            <span className="font-tajawal rtl">اطلب خدمة الآن</span>
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <span>اطلب خدمة الآن</span>
+            <ArrowRight className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform rotate-180" />
           </Button>
           
           <Button
             onClick={scrollToContact}
             variant="outline"
-            className="btn-glass px-8 py-4 text-lg rounded-full border-orange/50 text-foreground hover:text-orange"
+            className="btn-glass px-8 py-4 text-lg rounded-full border-orange/50 text-foreground hover:text-orange font-tajawal"
           >
-            <span>Contact Us</span>
-            <span className="mx-2">•</span>
-            <span className="font-tajawal">تواصل معنا</span>
+            تواصل معنا
           </Button>
         </div>
 
         {/* Floating Contact Info */}
         <div className="mt-16 animate-fade-in" style={{animationDelay: '1s'}}>
           <div className="inline-flex items-center glass px-6 py-3 rounded-full">
-            <span className="text-orange font-semibold">+962 7 8295 0000</span>
+            <span className="text-orange font-semibold font-tajawal">+962 7 8295 0000</span>
           </div>
         </div>
       </div>

@@ -19,15 +19,13 @@ const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
     
     toast({
-      title: "Message Sent!",
-      description: "We'll get back to you soon. شكراً لتواصلك معنا",
+      title: "تم إرسال الرسالة!",
+      description: "سنتواصل معك قريباً. شكراً لتواصلك معنا",
     });
 
-    // Reset form
     setFormData({
       name: '',
       email: '',
@@ -46,34 +44,30 @@ const ContactSection: React.FC = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
-      titleAr: 'الهاتف',
+      title: 'الهاتف',
       value: '+962 7 8295 0000',
       link: 'tel:+962782950000'
     },
     {
       icon: Mail,
-      title: 'Email',
-      titleAr: 'البريد الإلكتروني',
+      title: 'البريد الإلكتروني',
       value: 'info@krypton.jo',
       link: 'mailto:info@krypton.jo'
     },
     {
       icon: MapPin,
-      title: 'Location',
-      titleAr: 'الموقع',
-      value: 'Amman, Jordan',
-      valueAr: 'عمان، الأردن'
+      title: 'الموقع',
+      value: 'عمان، الأردن'
     }
   ];
 
   const services = [
-    'Web Development',
-    'Mobile App Development', 
-    'UI/UX Design',
-    'Branding',
-    'SEO',
-    'Technical Support'
+    'تطوير المواقع',
+    'تطوير التطبيقات', 
+    'تصميم واجهات المستخدم',
+    'الهوية البصرية',
+    'تحسين محركات البحث',
+    'الدعم الفني'
   ];
 
   return (
@@ -81,14 +75,11 @@ const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Get In <span className="text-gradient">Touch</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-tajawal">
+            <span className="text-gradient">تواصل معنا</span>
           </h2>
-          <h3 className="text-2xl md:text-3xl font-tajawal rtl text-muted-foreground mb-6">
-            تواصل معنا
-          </h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Ready to start your next project? Let's discuss how we can help bring your ideas to life
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-tajawal">
+            هل أنت مستعد لبدء مشروعك القادم؟ دعنا نناقش كيف يمكننا مساعدتك في تحويل أفكارك إلى واقع
           </p>
         </div>
 
@@ -96,41 +87,38 @@ const ContactSection: React.FC = () => {
           {/* Contact Form */}
           <div className="animate-on-scroll">
             <div className="glass rounded-2xl p-8">
-              <h4 className="text-2xl font-bold mb-6 text-foreground">
-                Send us a message
-                <span className="block text-lg font-tajawal rtl text-muted-foreground mt-2">
-                  أرسل لنا رسالة
-                </span>
+              <h4 className="text-2xl font-bold mb-6 text-foreground font-tajawal">
+                أرسل لنا رسالة
               </h4>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Input
-                    placeholder="Your Name / اسمك"
+                    placeholder="اسمك الكريم"
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
                     required
-                    className="glass border-white/20 focus:border-orange"
+                    className="glass border-white/20 focus:border-orange text-right font-tajawal"
                   />
                 </div>
 
                 <div>
                   <Input
                     type="email"
-                    placeholder="Your Email / بريدك الإلكتروني"
+                    placeholder="بريدك الإلكتروني"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
                     required
-                    className="glass border-white/20 focus:border-orange"
+                    className="glass border-white/20 focus:border-orange text-right font-tajawal"
                   />
                 </div>
 
                 <div>
                   <Select value={formData.service} onValueChange={(value) => handleInputChange('service', value)}>
-                    <SelectTrigger className="glass border-white/20 focus:border-orange">
-                      <SelectValue placeholder="Select Service / اختر الخدمة" />
+                    <SelectTrigger className="glass border-white/20 focus:border-orange text-right font-tajawal">
+                      <SelectValue placeholder="اختر الخدمة المطلوبة" />
                     </SelectTrigger>
-                    <SelectContent className="glass border-white/20">
+                    <SelectContent className="glass border-white/20 font-tajawal">
                       {services.map((service) => (
                         <SelectItem key={service} value={service}>
                           {service}
@@ -142,23 +130,21 @@ const ContactSection: React.FC = () => {
 
                 <div>
                   <Textarea
-                    placeholder="Your Message / رسالتك"
+                    placeholder="رسالتك أو استفسارك"
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
                     required
                     rows={5}
-                    className="glass border-white/20 focus:border-orange resize-none"
+                    className="glass border-white/20 focus:border-orange resize-none text-right font-tajawal"
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="btn-orange w-full py-3 text-lg group"
+                  className="btn-orange w-full py-3 text-lg group font-tajawal"
                 >
-                  <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
-                  Send Message
-                  <span className="mx-2">•</span>
-                  <span className="font-tajawal">إرسال الرسالة</span>
+                  <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform rotate-180" />
+                  إرسال الرسالة
                 </Button>
               </form>
             </div>
@@ -171,33 +157,23 @@ const ContactSection: React.FC = () => {
                 const IconComponent = info.icon;
                 return (
                   <div key={index} className="glass rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
-                    <div className="flex items-start space-x-4">
+                    <div className="flex items-start space-x-4 rtl space-x-reverse">
                       <div className="w-12 h-12 bg-orange-gradient rounded-lg flex items-center justify-center group-hover:animate-glow">
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
-                      <div className="flex-1">
-                        <h5 className="text-lg font-bold text-foreground mb-1">
+                      <div className="flex-1 text-right">
+                        <h5 className="text-lg font-bold text-foreground mb-1 font-tajawal">
                           {info.title}
                         </h5>
-                        <div className="text-sm font-tajawal rtl text-muted-foreground mb-2">
-                          {info.titleAr}
-                        </div>
                         {info.link ? (
                           <a
                             href={info.link}
-                            className="text-orange hover:text-orange-dark transition-colors font-medium"
+                            className="text-orange hover:text-orange-dark transition-colors font-medium font-tajawal"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <div>
-                            <div className="text-orange font-medium">{info.value}</div>
-                            {info.valueAr && (
-                              <div className="font-tajawal rtl text-sm text-muted-foreground mt-1">
-                                {info.valueAr}
-                              </div>
-                            )}
-                          </div>
+                          <div className="text-orange font-medium font-tajawal">{info.value}</div>
                         )}
                       </div>
                     </div>
@@ -210,11 +186,11 @@ const ContactSection: React.FC = () => {
             <div className="glass rounded-2xl p-4 h-64 bg-gradient-to-br from-orange/10 to-orange/5 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-orange mx-auto mb-4" />
-                <div className="text-lg font-medium text-foreground mb-2">
-                  Find us in Amman
-                </div>
-                <div className="font-tajawal rtl text-muted-foreground">
+                <div className="text-lg font-medium text-foreground mb-2 font-tajawal">
                   تجدنا في عمان
+                </div>
+                <div className="font-tajawal text-muted-foreground">
+                  المملكة الأردنية الهاشمية
                 </div>
               </div>
             </div>
